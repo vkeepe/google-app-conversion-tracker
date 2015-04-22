@@ -1,6 +1,6 @@
 /********* GoogleAppTracking.m Cordova Plugin Implementation *******/
 
-#import "GoogleConversionPing.h"
+#import "ACTReporter.h"
 #import "GoogleAppTracking.h"
 #import <Cordova/CDV.h>
 
@@ -16,8 +16,10 @@
     [self.commandDelegate runInBackground:^{
 
       // see: https://developers.google.com/app-conversion-tracking/
-      [GoogleConversionPing pingWithConversionId:conversion_id label:tracking_label value:tracking_value isRepeatable:repeatable];
-
+      [ACTConversionReporter reportWithConversionID:conversion_id label:tracking_label value:tracking_value isRepeatable:repeatable];
+        
+      [ACTAutomatedUsageTracker enableAutomatedUsageReportingWithConversionID:conversion_id];
+        
       CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
       [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];

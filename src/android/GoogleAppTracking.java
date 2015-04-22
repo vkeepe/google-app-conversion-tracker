@@ -1,4 +1,4 @@
-package com.myhealthteams.plugins;
+package com.keepe.plugins.gatracker;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -29,12 +29,16 @@ public class GoogleAppTracking extends CordovaPlugin {
 
     try {
       // see: https://developers.google.com/app-conversion-tracking/docs/android-conversion-tracking
-      GoogleConversionPing.recordConversionPing(
+      AdWordsConversionReporter.reportWithConversionId(
           this.cordova.getActivity().getApplicationContext(),
           conversion_id,
           tracking_label,
           tracking_value,
           repeatable);
+      // Enable automated usage reporting.
+      AdWordsAutomatedUsageReporter.enableAutomatedUsageReporting(
+          this.cordova.getActivity().getApplicationContext(),
+          conversion_id);
     } catch(final Exception e) {
       callbackContext.error("Error in GoogleAppConversion tracking.");
     }

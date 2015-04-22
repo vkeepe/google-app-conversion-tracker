@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  id="com.myhealthteams.plugins.GoogleAppTracking" version="0.0.1">
+  id="com.keepe.gatracker" version="0.0.1">
 
   <name>GoogleAppTracking</name>
   <description>Cordova Plugin for Google App Install Conversion Tracking</description>
@@ -24,8 +24,8 @@
         <param name="ios-package" value="GoogleAppTracking"/>
       </feature>
     </config-file>
-
-    <header-file src="src/ios/GoogleConversionPing.h" />
+    <framework src="AdSupport.framework" />
+    <header-file src="src/ios/ACTReporter.h" />
     <header-file src="src/ios/GoogleAppTracking.h" />
     <source-file src="src/ios/GoogleAppTracking.m" />
     <source-file src="lib/ios/libGoogleConversionTracking.a" framework="true"/>
@@ -34,7 +34,7 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="GoogleAppTracking" >
-        <param name="android-package" value="com.myhealthteams.plugins.GoogleAppTracking"/>
+        <param name="android-package" value="com.keepe.plugins.gatracker.GoogleAppTracking"/>
       </feature>
     </config-file>
 
@@ -52,8 +52,8 @@
       </receiver>
     </config-file>
 
-    <source-file src="src/android/GoogleAppTracking.java" target-dir="src/com/myhealthteams/plugins" />
-    <source-file src="lib/android/GoogleConversionTrackingSdk-1.1.0.jar" target-dir="libs" />
+    <source-file src="src/android/GoogleAppTracking.java" target-dir="src/com/keepe/plugins/gatracker" />
+    <source-file src="lib/android/GoogleConversionTrackingSdk-2.2.1.jar" target-dir="libs" />
   </platform>
 
 </plugin>
