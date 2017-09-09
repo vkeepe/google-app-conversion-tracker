@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-googleconversiontracker",
+  "version": "0.0.",
+  "description": "App Conversion via google",
+  "cordova": {
+    "id": "cordova-plugin-googleconversiontracker",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkeepe/google-app-conversion-tracker.git"
+  },
+  "keywords": [
+    "Google Tracker",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Paul Nocks",
+  "license": "Apache 2.0 License",
+  "bugs": {
+    "url": "git+https://github.com/vkeepe/google-app-conversion-tracker/issues"
+  },
+  "homepage": "git+https://github.com/vkeepe/google-app-conversion-tracker"
+}
