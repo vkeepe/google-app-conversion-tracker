@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-googleconversiontracker",
-  "version": "0.0.",
+  "name": "GoogleAppTracking",
+  "version": "0.0.1",
   "description": "App Conversion via google",
   "cordova": {
-    "id": "cordova-plugin-googleconversiontracker",
+    "id": "com.keepe.gatracker",
     "platforms": [
       "android",
       "ios"
