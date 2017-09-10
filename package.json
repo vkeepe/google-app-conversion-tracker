@@ -1,5 +1,5 @@
 {
-  "name": "GoogleAppTracking",
+  "name": "google-app-conversion-tracker",
   "version": "0.0.1",
   "description": "App Conversion via google",
   "cordova": {
