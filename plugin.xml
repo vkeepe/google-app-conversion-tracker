@@ -53,7 +53,7 @@
     </config-file>
 
     <source-file src="src/android/GoogleAppTracking.java" target-dir="src/com/keepe/plugins/gatracker" />
-    <source-file src="lib/android/GoogleConversionTrackingSdk-2.2.1.jar" target-dir="libs" />
+    <lib-file src="lib/android/GoogleConversionTrackingSdk-2.2.1.jar" target-dir="libs" />
   </platform>
 
 </plugin>
